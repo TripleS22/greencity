@@ -1,0 +1,76 @@
+/* Sticky column styles for Filament tables */
+/* Matches Filament's native bg-white (light) and dark:bg-gray-900 (dark) */
+
+.fi-ta-cell.sticky-col,
+.fi-ta-header-cell.sticky-col {
+    position: sticky !important;
+    z-index: 1 !important;
+    background-color: white !important;
+}
+
+.fi-ta-header-cell.sticky-col {
+    z-index: 2 !important;
+}
+
+/* Dark mode - matches .fi-ta-ctn dark:bg-gray-900 = rgb(17 24 39) */
+.dark .fi-ta-cell.sticky-col,
+.dark .fi-ta-header-cell.sticky-col {
+    background-color: rgb(17 24 39) !important;
+}
+
+/* Striped row sticky cells */
+.fi-ta-row.fi-striped .fi-ta-cell.sticky-col {
+    background-color: rgb(249 250 251) !important;
+    /* gray-50 */
+}
+
+.dark .fi-ta-row.fi-striped .fi-ta-cell.sticky-col {
+    background-color: rgba(255 255 255 / 0.05) !important;
+    /* Fallback: blend on top of gray-900 */
+    background-color: rgb(20 27 42) !important;
+}
+
+/* Hover state for clickable rows */
+.fi-ta-row.fi-clickable:hover .fi-ta-cell.sticky-col {
+    background-color: rgb(249 250 251) !important;
+    /* gray-50 */
+}
+
+.dark .fi-ta-row.fi-clickable:hover .fi-ta-cell.sticky-col {
+    background-color: rgb(20 27 42) !important;
+}
+
+/* Selected row */
+.fi-ta-row.fi-selected .fi-ta-cell.sticky-col {
+    background-color: rgb(249 250 251) !important;
+}
+
+.dark .fi-ta-row.fi-selected .fi-ta-cell.sticky-col {
+    background-color: rgb(20 27 42) !important;
+}
+
+/* Sticky column positions */
+.sticky-col-0 {
+    left: 0 !important;
+    min-width: 120px;
+}
+
+.sticky-col-1 {
+    left: 120px !important;
+    min-width: 80px;
+}
+
+.sticky-col-2 {
+    left: 200px !important;
+    min-width: 120px;
+}
+
+.sticky-col-3 {
+    left: 320px !important;
+    min-width: 130px;
+    box-shadow: 4px 0 6px -2px rgba(0, 0, 0, 0.08);
+}
+
+.dark .sticky-col-3 {
+    box-shadow: 4px 0 8px -2px rgba(0, 0, 0, 0.4);
+}
